@@ -1,5 +1,16 @@
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%$$$$$$$$$$$$$$$$$$$
-# import
+import gspread
+
+ gc = gspread.service_account(
+    filename = "libe-auto-tweet.json"
+ )
+
+ sh = gc.create(
+        "test_1",
+        folder_id="1ZO3eZuSukBruqwW54IOw7BjiwruUn2po"
+ )
+
+ ws = sh.get_worksheet(0)
 
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
