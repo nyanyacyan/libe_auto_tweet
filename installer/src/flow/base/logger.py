@@ -35,3 +35,13 @@ class SimpleLogger:
 
 
 
+if __name__ == "__main__":
+    # ロガーを取得
+    logger = SimpleLogger(__name__).get_logger()
+
+    # 各レベルのログを出力してみる
+    logger.debug("これはデバッグログです")
+    logger.info("これは情報ログです")
+    logger.warning("これは警告ログです")
+    logger.error("これはエラーログです")
+    logger.critical("これは重大ログです")
